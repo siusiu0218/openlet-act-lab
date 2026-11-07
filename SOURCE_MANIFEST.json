@@ -8,5 +8,16 @@
     "validation_cache.py": "1163350c06692ce4ab25f0b379f6af7a42fddc32806d9686f02ee3250bbc3bb3",
     "test_checkpoint_io.py": "1bc3be8f2462bb0a1d72f2e2b12dbed35409c25663015f16b3c2449aff15f774",
     "test_validation_cache.py": "cb0a66fa7ac82bdc3c22456415bd22fe87ff52078c2283bc6052ca9e2bcc87fd"
+  },
+  "training_adaptation": {
+    "source_commit": "38c50dd",
+    "status": "portable adaptation; CPU tests only; ACT runtime pending",
+    "source_files_sha256": {
+      "long_act.py": "24d8e9b6f999a404eae6220af149fefa8c5cd3382446a3fe3196116c73367e48",
+      "long_act_profile.py": "9baf4786f4cc369faf54e8d163fc69214d81d2d707108ca3f0b8225d27826b62",
+      "long_act_validation.py": "7fd3e6e605a93d7c31802609b143185f5d53a753778e946ee3a421ee6b46fffe",
+      "act_runtime.py": "8c67985cb0e1d4b8588d6ba12fe15a33c11cc7ede40ff397d0d2a8be7b782700",
+      "test_long_act.py": "ab6a0ea8aef8e36940ffee8a6a89afbc49e16c2ca6ed6801e30d99d27efda48e"
+    }
   }
 }
