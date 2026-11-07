@@ -1,0 +1,23 @@
+{
+  "host_os": "Rocky Linux (exact version to verify)",
+  "scheduler": "Slurm",
+  "container_runtime": "Apptainer (exact version to verify)",
+  "container_os": "Ubuntu 20.04",
+  "ros": "Noetic",
+  "mujoco_cpp": "3.0.1",
+  "mujoco_python": "3.2.3",
+  "image_path": "REQUIRED_LOCAL_SIF_PATH",
+  "image_sha256": "REQUIRED",
+  "workspace_path": "REQUIRED_LOCAL_WORKSPACE",
+  "upstream_commit": "62de744c3de933ad269833a3d39545481e316ecf",
+  "adapted_commit": "7387173ee2c2c73b79c95e4813fd7675e992e079",
+  "historical_resources": {
+    "gpus": 1,
+    "cpus": 4,
+    "memory_gib": 12,
+    "slurm_minutes": 8,
+    "action_seconds": 180,
+    "outer_seconds": 330
+  },
+  "status": "inventory template; not a runnable deployment configuration"
+}

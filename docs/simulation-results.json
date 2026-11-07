@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-25",
+  "source_commit": "7387173ee2c2c73b79c95e4813fd7675e992e079",
+  "full_action_passes": 6,
+  "strict_exit_passes": 5,
+  "results": [
+    {
+      "seed": 29,
+      "repetition": 1,
+      "action_passed": true,
+      "lift_m": {
+        "cylinder_1": 0.1089857797432745,
+        "cylinder_2": 0.10938690240333626,
+        "cylinder_3": 0.10995494899508562
+      },
+      "strict_exit_passed": true
+    },
+    {
+      "seed": 30,
+      "repetition": 1,
+      "action_passed": true,
+      "lift_m": {
+        "cylinder_1": 0.112108552651777,
+        "cylinder_2": 0.10924300032467937,
+        "cylinder_3": 0.11517416586243812
+      },
+      "strict_exit_passed": true
+    },
+    {
+      "seed": 31,
+      "repetition": 1,
+      "action_passed": true,
+      "lift_m": {
+        "cylinder_1": 0.11310608665114685,
+        "cylinder_2": 0.10258195108493784,
+        "cylinder_3": 0.10874852692483394
+      },
+      "strict_exit_passed": true
+    },
+    {
+      "seed": 29,
+      "repetition": 2,
+      "action_passed": true,
+      "lift_m": {
+        "cylinder_1": 0.10048749726980366,
+        "cylinder_2": 0.10613546449826461,
+        "cylinder_3": 0.11088206996316463
+      },
+      "strict_exit_passed": true
+    },
+    {
+      "seed": 30,
+      "repetition": 2,
+      "action_passed": true,
+      "lift_m": {
+        "cylinder_1": 0.10469246093224938,
+        "cylinder_2": 0.11265904603794064,
+        "cylinder_3": 0.11008350062759609
+      },
+      "strict_exit_passed": true
+    },
+    {
+      "seed": 31,
+      "repetition": 2,
+      "action_passed": true,
+      "lift_m": {
+        "cylinder_1": 0.10856510466294744,
+        "cylinder_2": 0.1169673428888991,
+        "cylinder_3": 0.10436331091495354
+      },
+      "strict_exit_passed": false
+    }
+  ]
+}
