@@ -8,7 +8,7 @@
 
 ```sh
 python -m pip install -r requirements.txt
-python example.py
+python -m examples.offline_metrics
 python -m unittest discover -v
 ```
 
@@ -36,10 +36,22 @@ prediction 与 target 应为模型后处理后的数据集单位，手部乘1.57
 
 ## 来源与许可
 
-模块从本地 OpenLET 管理仓库提交 `38c50dd` 的 `tools/act-bootstrap` 提取，逐文件SHA见 `SOURCE_MANIFEST.json`。它们是围绕 LeRobot ACT 实验编写的适配工具。本次未复制 LeRobot、PyTorch 或机器人官方源码。第三方依赖遵循各自许可证。
+模块从本地 OpenLET 管理仓库提交 `38c50dd` 的 `tools/act-bootstrap` 提取，逐文件SHA见 `docs/source_manifest.json`。它们是围绕 LeRobot ACT 实验编写的适配工具。本次未复制 LeRobot、PyTorch 或机器人官方源码。第三方依赖遵循各自许可证。
 
 仓库所有者尚未选择开源许可证，当前未授予额外再分发许可。
 
 ## 训练与恢复示例
 
-配置驱动的ACT入口、恢复契约、350输入评估函数和CPU演示见 [TRAINING.md](TRAINING.md)。移植入口为实验性代码，真实ACT运行待目标环境验收。
+配置驱动的ACT入口、恢复契约、350输入评估函数和CPU演示见 [训练说明](docs/training.md)。移植入口为实验性代码，真实ACT运行待目标环境验收。
+
+## 目录结构
+
+```text
+openlet_act/   核心模块与训练命令入口
+examples/      合成数据与保存恢复演示
+configs/       可复制的配置模板
+tests/         独立单元测试
+docs/          训练说明及来源记录
+```
+
+所有示例和测试命令均在仓库根目录运行。个人配置与运行产物由 .gitignore 排除。

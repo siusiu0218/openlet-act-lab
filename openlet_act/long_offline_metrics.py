@@ -3,7 +3,7 @@ import hashlib
 
 import numpy as np
 
-from inference_contract import validate_limits
+from openlet_act.inference_contract import validate_limits
 
 EPISODES = tuple(range(24, 31))
 HORIZON = 100
@@ -64,9 +64,9 @@ def validate_raw(raw, plan, expected_state, expected_target):
     return dict(identity=identity, input_sha256=hashes), state.copy(), target.copy(), pad.copy()
 
 
-def validate_evidence(a, records):
+def validate_evidence(a, records, max_inputs=35):
     n = len(records)
-    require(n > 0 and n <= 35, 'sample count')
+    require(n > 0 and n <= max_inputs, 'sample count')
     for key, tail in [('state', (18,)), ('target', (100, 21)),
                       ('normalized', (100, 21)), ('prediction', (100, 21))]:
         array(a[key], (n, *tail), key, np.dtype('float32'))
@@ -100,10 +100,10 @@ def _delta(values, limits):
                 maximum=(v.max(0) if len(v) else np.zeros(18)).tolist())
 
 
-def metrics(a, records, limits, action_mean):
+def metrics(a, records, limits, action_mean, max_inputs=35):
     """All numeric metrics are physical units; no scalar mix of rad and m/s."""
     validate_limits(limits)
-    validate_evidence(a, records)
+    validate_evidence(a, records, max_inputs)
     mean = array(action_mean, (21,), 'training action mean').astype(np.float64)
     pred, target = a['prediction'].astype(np.float64)*SCALE, a['target'].astype(np.float64)*SCALE
     state = a['state'].astype(np.float64)*SCALE[:18]
