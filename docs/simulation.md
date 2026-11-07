@@ -26,5 +26,3 @@ OPENLET_OUTPUT=/path/to/copied-run OPENLET_TEST_SEED=29 OPENLET_INITIAL_RC=0 OPE
 
 上游基准62de744c，已验证适配版本7387173e。抓取主程序位于独立源码仓库的src/data_challenge_simulator/examples/task1.py，物体状态接口位于utils/object_pos.py，轨迹控制位于utils/trajectory_controller.py。7387173e的改动将lift/transfer每点0.02秒保持时间绑定物理仿真时间；时钟缺失、回退或停滞会失败，每步墙钟等待最多2秒。
 
-当前未找到该仿真子目录明确的许可证文件，完整官方策略及第三方源码的再分发范围待确认。此批整理保留源码身份和路径，完整启动部署包需要补齐依赖、逐项审阅再分发范围及目标环境验证。
-
